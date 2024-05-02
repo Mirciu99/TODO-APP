@@ -1,5 +1,8 @@
-/* CSS RESET */
+/* styles.css */
 
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+/* CSS RESET */
 *,
 *::before,
 *::after {
@@ -44,15 +47,15 @@ h6 {
 /* APP */
 
 body {
-  background-color: #1d0024;
-  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  color:aliceblue;
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  color: white;
+  font-family: "Rubik", sans-serif;
 }
 
 /* container */
 
 .container {
-
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -60,10 +63,9 @@ body {
 /* todos list */
 
 .title {
-  margin-top: 50px;
-  margin-bottom: 40px;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 3rem;
+  padding: 3rem 0 1rem;
 }
 
 .todos {
@@ -76,50 +78,74 @@ body {
 .todo {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.25rem;
 
-  background-color: rgba(222, 218, 218, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   width: 50%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.mutations {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.todo__status,
+.todo__delete {
+  border: none;
+  padding: 5px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+  color: white;
+  font-size: 1.6rem;
+
+  &:hover {
+    transform: scale(1.15);
+  }
 }
 
 .todo__status {
-  border: none;
-  padding: 0;
-  line-height: 1;
-  cursor: pointer;
-  background: none;
-  color:aliceblue;
+  font-size: 1.75rem;
 }
 
-.todo__status:hover {
-  transform: scale(1.1);
-}
-
-/* todo form */
+/* form */
 .form {
+  display: flex;
   gap: 0.5rem;
   width: 50%;
   margin: 1rem auto;
-
-  display: flex;
 }
 
 .form__input {
   flex: 1;
-  padding: 0.25rem 0.5rem;
-}
-
-.todo__delete {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
   border: none;
-  padding: 0;
-  line-height: 1;
-  cursor: pointer;
-  margin-left: 10px;
-  background: none;
-  color:aliceblue;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
 }
 
-.todo__delete:hover {
-  transform: scale(1.1);
+.form__button {
+  border: none;
+  background-color: rgba(113, 0, 212, 0.7);
+  cursor: pointer;
+  color: white;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba(95, 0, 179, 0.5);
+  }
 }
