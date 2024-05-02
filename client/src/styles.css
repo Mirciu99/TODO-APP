@@ -52,6 +52,7 @@ body {
 /* container */
 
 .container {
+
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -59,7 +60,10 @@ body {
 /* todos list */
 
 .title {
+  margin-top: 50px;
+  margin-bottom: 40px;
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .todos {
